@@ -23,7 +23,7 @@ bot.on('message', message => {
     else if(msg === prefix + 'thank')
         message.channel.send('np');
 
-    else if(msg.includes === 'crab')
+    else if(msg === 'crab')
         message.channel.send(':crab:CRABS ARE PEOPLE:crab:CLAMS ARE PEOPLE:crab:LEGIT OR QUIT:crab:');
 
 
