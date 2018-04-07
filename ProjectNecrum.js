@@ -1,11 +1,11 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const bot = new Discord.bot();
 
-client.on('ready', () => {
+bot.on('ready', () => {
     console.log('I am ready!');
 });
 
-client.on('message', message => {
+bot.on('message', message => {
 
     if(message.content.toLowerCase() === 'live my child')
         message.channel.send('Hey ' + message.author + ' you dork!');
@@ -19,4 +19,4 @@ client.on('message', message => {
 
 });
 
-client.login(process.env.BOT_TOKEN);
+bot.login(process.env.BOT_TOKEN);
