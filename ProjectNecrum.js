@@ -13,6 +13,9 @@ client.on('message', message => {
     else if(message.content.toLowerCase() === 'foo')
         message.channel.send('bar');
 
+    else if(message.content.toLowerCase() === 'thank')
+    message.channel.send('np');
+
 
 });
 
