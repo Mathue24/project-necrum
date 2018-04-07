@@ -10,6 +10,10 @@ client.on('message', message => {
     if(message.content.toLowerCase() === 'live my child')
         message.channel.send('Hey ' + message.author + ' you dork!');
 
+    else if(message.content.toLowerCase() === 'foo')
+        message.channel.send('bar');
+
+
 });
 
 client.login(process.env.BOT_TOKEN);
