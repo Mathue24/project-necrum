@@ -1,29 +1,22 @@
 const Discord = require('discord.js');
-const bot = new Discord.bot();
+const client = new Discord.Client();
 
-//Bot Settings
-const prefix = '~';
-
-//On Startup
-bot.on('ready', () => {
+client.on('ready', () => {
     console.log('I am ready!');
 });
 
-//On Message
-bot.on('message', message => {
+client.on('message', message => {
 
-    let msg = message.content.toLowerCase();
-
-    if(msg === prefix + 'live my child')
+    if(message.content.toLowerCase() === 'live my child')
         message.channel.send('Hey ' + message.author + ' you dork!');
 
-    else if(msg === prefix + 'foo')
+    else if(message.content.toLowerCase() === 'foo')
         message.channel.send('bar');
 
-    else if(msg === prefix + 'thank')
-        message.channel.send('np');
+    else if(message.content.toLowerCase() === 'thank')
+    message.channel.send('np');
 
 
 });
 
-bot.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);
