@@ -13,8 +13,11 @@ bot.on('ready', () => {
 bot.on('message', message => {
 
     let msg = message.content.toLowerCase();
+    
+    if(message.author.bot) return;
+    else if(message.channel.type === "dm") return;
 
-    if(msg === prefix + 'live my child')
+    else if(msg === prefix + 'live my child')
         message.channel.send('Hey ' + message.author + ' you dork!');
 
     else if(msg === prefix + 'foo')
@@ -24,7 +27,9 @@ bot.on('message', message => {
         message.channel.send('np');
 
     else if(msg.includes('crab'))
+    {
         message.channel.send(':crab:CRABS ARE PEOPLE:crab:CLAMS ARE PEOPLE:crab:LEGIT OR QUIT:crab:');
+    }
 
 
 });
