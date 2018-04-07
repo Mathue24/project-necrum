@@ -21,7 +21,10 @@ bot.on('message', message => {
         message.channel.send('bar');
 
     else if(msg === prefix + 'thank')
-    message.channel.send('np');
+        message.channel.send('np');
+
+    else if(msg.includes === 'crab' || 'crabs' || 'clam' || 'clams')
+        message.channel.send(':crab:CRABS ARE PEOPLE:crab:CLAMS ARE PEOPLE:crab:LEGIT OR QUIT:crab:');
 
 
 });
