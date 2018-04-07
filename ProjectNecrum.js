@@ -20,9 +20,12 @@ bot.on('message', message => {
     else if(msg === prefix + 'foo')
         message.channel.send('bar');
 
+<<<<<<< HEAD
     else if(msg === prefix + 'thank')
     message.channel.send('np');
 
+=======
+>>>>>>> parent of d4df3c3... update
 
 });
 
