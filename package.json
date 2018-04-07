@@ -1,6 +1,6 @@
 {
-  "name": "Test",
-  "description": "Test",
+  "name": "project-necrum",
+  "description": "Yep",
   "version": "0.0.0",
   "main": "ProjectNecrum.js",
   "scripts": {
