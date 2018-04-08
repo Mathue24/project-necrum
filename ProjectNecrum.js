@@ -34,11 +34,11 @@ bot.on('message', message => {
 
     else if(msg.includes('move'))
     {
-        if (!message.mentions.users.first()) 
-        {
-            message.channel.send("You have to tag someone my dude.")
-            break;
-        }
+        // if (!message.mentions.users.first()) 
+        // {
+        //     message.channel.send("You have to tag someone my dude.")
+        //     break;
+        // }
         // var member = (message.mentions.users.first())
         // guild.member(member).setVoiceChannel(AFK)
         // message.channel.send(":right_facing_fist: " + member)
