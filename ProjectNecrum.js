@@ -30,7 +30,7 @@ bot.on('message', message => {
         if(!message.member.roles.some(r=>["Administrator", "Member of The Party"].includes(r.name)) )
             return message.reply("Don't talk to me you pathetic worm!");
 
-        message.channel.send("Thank you @cmdragon#4261 for your volunteering, your efforts to improve our glorious and pure regime are appreciated!");
+        message.channel.send("Thank you @cmdragon#4261 for your volunteering, your efforts to improve our glorious and pure regime are appreciated! :penguin_face_at_low_resolution:");
     }
 
     else if(msg.startsWith(prefix + 'tag'))
@@ -39,7 +39,7 @@ bot.on('message', message => {
             return message.reply("Don't talk to me you pathetic worm!");
 
         var member= message.mentions.members.first();
-        message.channel.send(member.displayName);
+        message.channel.send(member.author);
     }
 
     else if(msg === prefix + 'foo')
