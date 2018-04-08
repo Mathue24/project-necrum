@@ -38,8 +38,8 @@ bot.on('message', message => {
         if(!message.member.roles.some(r=>["Administrator", "Member of The Party"].includes(r.name)) )
             return message.reply("Don't talk to me you pathetic worm!");
 
-        let member = message.mentions.members.first() || message.guild.members.get(args[0]);
-        message.channel.send("${member.user.tag}");
+        var member= message.mentions.members.first();
+        message.channel.send(member.displayName);
     }
 
     else if(msg === prefix + 'foo')
