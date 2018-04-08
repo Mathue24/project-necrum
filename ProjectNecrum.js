@@ -32,7 +32,7 @@ bot.on('message', message => {
         message.channel.send('np');
     }
 
-    else if(msg === prefix + 'move')
+    else if(msg.includes('move'))
     {
         if (!message.mentions.users.first()) 
         {
