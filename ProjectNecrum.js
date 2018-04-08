@@ -42,6 +42,16 @@ bot.on('message', message => {
         message.channel.send(':crab:CRABS ARE PEOPLE:crab:CLAMS ARE PEOPLE:crab:LEGIT OR QUIT:crab:');
     }
 
+    else if (!message.mentions.users.first()) 
+    {
+        message.channel.send("You have to tag someone my dude.")
+        break;
+    }
+    var member = (message.mentions.users.first())
+    guild.member(member).setVoiceChannel(Rats)
+    message.channel.send(":right_facing_fist: " + member)
+    break;
+
 
 });
 
