@@ -39,7 +39,7 @@ bot.on('message', message => {
             return message.reply("Don't talk to me you pathetic worm!");
 
         var member= message.mentions.members.first();
-        message.channel.send(member);
+        message.channel.send(member.user.id);
         // message.channel.send(member.displayName);
         // message.channel.send(member.message.author);
     }
