@@ -25,6 +25,14 @@ bot.on('message', message => {
         message.channel.send('Hello ' + message.author + '!');
     }
 
+    else if(msg === prefix + 'thank')
+    {
+        if(!message.member.roles.some(r=>["Administrator", "Member of The Party"].includes(r.name)) )
+            return message.reply("Don't talk to me you pathetic worm!");
+
+        message.channel.send("Thank you @cmdragon#4261 for your volunteering, your efforts to improve our glorious and pure regime are appreciated!");
+    }
+
     else if(msg === prefix + 'foo')
     {
         message.channel.send('bar');
