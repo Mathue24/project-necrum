@@ -34,7 +34,7 @@ bot.on('message', message => {
 
     else if(msg === prefix + 'move')
     {
-        member.setVoiceChannel(channel);
+        member.setVoiceChannel(AFK);
     }
     
     else if(msg.includes('crab'))
