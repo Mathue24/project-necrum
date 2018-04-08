@@ -32,17 +32,11 @@ bot.on('message', message => {
         message.channel.send('np');
     }
 
-    else if(msg.includes('move'))
+    else if(msg.startsWith(prefix + 'move'))
     {
-        // if (!message.mentions.users.first()) 
-        // {
-        //     message.channel.send("You have to tag someone my dude.")
-        //     break;
-        // }
-        // var member = (message.mentions.users.first())
-        // guild.member(member).setVoiceChannel(AFK)
-        // message.channel.send(":right_facing_fist: " + member)
-        // break;
+        let channel = message.content.split(" ").slice(2).join(" ");
+        var kickMember = message.mentions.members.first();
+        kickMember.setVoiceChannel(channel);
     }
     
     else if(msg.includes('crab'))
