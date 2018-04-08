@@ -31,7 +31,7 @@ bot.on('message', message => {
             return message.reply("Don't talk to me you pathetic worm!");
 
         var member= message.mentions.members.first();
-        message.channel.send("Thank you " + member.displayName + " for your volunteering, your efforts to improve our glorious and pure regime are appreciated! :penguin_face_at_low_resolution:");
+        message.channel.send("Thank you " + member.displayName + " for your volunteering, your efforts to improve our glorious and pure regime are appreciated!");
     }
 
     else if(msg.startsWith(prefix + 'tag'))
