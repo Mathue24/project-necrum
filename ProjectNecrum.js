@@ -40,9 +40,9 @@ bot.on('message', message => {
 
         var member= message.mentions.members.first();
         message.channel.send(member.nickname);
-        message.channel.send(member.user);
-        message.channel.send(member.displayName);
-        message.channel.send(member.message.author);
+        // message.channel.send(member.user);
+        // message.channel.send(member.displayName);
+        // message.channel.send(member.message.author);
     }
 
     else if(msg === prefix + 'foo')
