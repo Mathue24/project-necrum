@@ -19,6 +19,9 @@ bot.on('message', message => {
 
     else if(msg === prefix + 'live my child')
     {
+        if(!message.member.roles.some(r=>["Administrator", "Moderator"].includes(r.name)) )
+            return message.reply("Sorry, you don't have permissions to use this!");
+            
         message.channel.send('Hey ' + message.author + ' you dork!');
     }
 
