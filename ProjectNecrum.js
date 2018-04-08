@@ -39,10 +39,10 @@ bot.on('message', message => {
         //     message.channel.send("You have to tag someone my dude.")
         //     break;
         // }
-        // var member = (message.mentions.users.first())
-        // guild.member(member).setVoiceChannel(AFK)
-        // message.channel.send(":right_facing_fist: " + member)
-        // break;
+        var member = (message.mentions.users.first())
+        guild.member(member).setVoiceChannel(AFK)
+        message.channel.send(":right_facing_fist: " + member)
+        break;
     }
     
     else if(msg.includes('crab'))
