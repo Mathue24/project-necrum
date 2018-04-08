@@ -20,19 +20,14 @@ bot.on('message', message => {
     else if(msg === prefix + 'live my child')
     {
         if(!message.member.roles.some(r=>["Administrator", "Member of The Party"].includes(r.name)) )
-            return message.reply("Sorry, you don't have permissions to use this!");
+            return message.reply("Don't talk to me you pathetic worm!");
 
-        message.channel.send('Hey ' + message.author + ' you dork!');
+        message.channel.send('Hello ' + message.author + '!');
     }
 
     else if(msg === prefix + 'foo')
     {
         message.channel.send('bar');
-    }
-
-    else if(msg === prefix + 'thank')
-    {
-        message.channel.send('np');
     }
 
     else if(msg.startsWith(prefix + 'move'))
