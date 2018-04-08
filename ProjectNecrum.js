@@ -33,6 +33,15 @@ bot.on('message', message => {
         message.channel.send("Thank you @cmdragon#4261 for your volunteering, your efforts to improve our glorious and pure regime are appreciated!");
     }
 
+    else if(msg.startsWith === prefix + 'tag')
+    {
+        if(!message.member.roles.some(r=>["Administrator", "Member of The Party"].includes(r.name)) )
+            return message.reply("Don't talk to me you pathetic worm!");
+
+        let member = message.mentions.members.first() || message.guild.members.get(args[0]);
+        message.channel.send("${member.user.tag}");
+    }
+
     else if(msg === prefix + 'foo')
     {
         message.channel.send('bar');
