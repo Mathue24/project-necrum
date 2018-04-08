@@ -25,7 +25,7 @@ bot.on('message', message => {
         message.channel.send('Hello ' + message.author + '!');
     }
 
-    else if(msg === prefix + 'thank')
+    else if(msg.startsWith(prefix + 'thank'))
     {
         if(!message.member.roles.some(r=>["Administrator", "Member of The Party"].includes(r.name)) )
             return message.reply("Don't talk to me you pathetic worm!");
