@@ -18,14 +18,25 @@ bot.on('message', message => {
     else if(message.channel.type === "dm") return;
 
     else if(msg === prefix + 'live my child')
+    {
         message.channel.send('Hey ' + message.author + ' you dork!');
+    }
 
     else if(msg === prefix + 'foo')
+    {
         message.channel.send('bar');
+    }
 
     else if(msg === prefix + 'thank')
+    {
         message.channel.send('np');
+    }
 
+    else if(msg === prefix + 'move')
+    {
+        member.setVoiceChannel(channel);
+    }
+    
     else if(msg.includes('crab'))
     {
         message.channel.send(':crab:CRABS ARE PEOPLE:crab:CLAMS ARE PEOPLE:crab:LEGIT OR QUIT:crab:');
