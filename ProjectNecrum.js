@@ -39,8 +39,7 @@ bot.on('message', message => {
             return message.reply("Don't talk to me you pathetic worm!");
 
         var member= message.mentions.members.first();
-        bot.sendMessage({to: channelID, message: `${user.mention()} message text`});
-        // message.channel.send(member.displayName);
+        message.channel.send(member.displayName);
         // message.channel.send(member.message.author);
     }
 
