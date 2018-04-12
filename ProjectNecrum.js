@@ -13,6 +13,8 @@ bot.on('ready', () => {
 bot.on('message', message => {
 
     let msg = message.content.toLowerCase();
+    let cont = message.content.slice(prefix.length).split(" ");
+    let args = cont.slice(1);
     
     if(message.author.bot) return;
     else if(message.channel.type === "dm") return;
@@ -65,11 +67,12 @@ bot.on('message', message => {
     {
         async function purge() 
         {
-            //message.delete();
+            message.delete();
             
             if(!message.member.roles.some(r=>["Administrator", "Member of The Party"].includes(r.name)) )
             {
-                return message.reply('Do not talk to me you pathetic worm! Only a \'Member of The Party\' can use this command!');
+                message.reply('Do not talk to me you pathetic worm! Only a \'Member of The Party\' can use this command!');
+                return;
             }
 
             if(isNaN(args[0]))
