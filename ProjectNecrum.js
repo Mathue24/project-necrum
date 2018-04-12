@@ -61,6 +61,11 @@ bot.on('message', message => {
         message.channel.send(':crab:CRABS ARE PEOPLE:crab:CLAMS ARE PEOPLE:crab:LEGIT OR QUIT:crab:');
     }
 
+    else if(msg.includes('test'))
+    {
+        message.channel.send('Yeh');
+    }
+
 
 });
 
