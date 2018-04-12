@@ -75,11 +75,11 @@ bot.on('message', message => {
                 return;
             }
 
-            if(isNaN(args[0]))
-            {
-                message.channel.send('Please use a number as your argument. \n Usage: '+ prefix +'purge <ammount>');
-                return;
-            }
+            // if(isNaN(args[0]))
+            // {
+            //     message.channel.send('Please use a number as your argument. \n Usage: '+ prefix +'purge <ammount>');
+            //     return;
+            // }
 
             const fetched = await message.channel.fetchMessage({limit: args[0]});
             console.log(fetched.size + ' messages found, deleting...');
