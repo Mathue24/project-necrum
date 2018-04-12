@@ -65,7 +65,7 @@ bot.on('message', message => {
     {
         async function purge() 
         {
-            message.delete();
+            //message.delete();
             
             if(!message.member.roles.some(r=>["Administrator", "Member of The Party"].includes(r.name)) )
             {
