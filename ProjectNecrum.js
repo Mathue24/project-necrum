@@ -61,7 +61,7 @@ bot.on('message', message => {
         message.channel.send(':crab:CRABS ARE PEOPLE:crab:CLAMS ARE PEOPLE:crab:LEGIT OR QUIT:crab:');
     }
 
-    else if(msg.startsWith(prefix + 'PURGe'))
+    else if(msg.startsWith(prefix + 'PURGE'))
     {
         async function purge() 
         {
