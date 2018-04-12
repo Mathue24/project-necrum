@@ -71,21 +71,21 @@ bot.on('message', message => {
             
             if(!message.member.roles.some(r=>["Administrator", "Member of The Party"].includes(r.name)) )
             {
-                message.reply('Do not talk to me you pathetic worm! Only a \'Member of The Party\' can use this command!');
+                message.reply('Do not talk to me you pathetic worm! Only a \`Member of The Party\` can use this command!');
                 return;
             }
 
-            // if(isNaN(args[0]))
-            // {
-            //     message.channel.send('Please use a number as your argument. \n Usage: '+ prefix +'purge <ammount>');
-            //     return;
-            // }
+            if(isNaN(args[0]))
+            {
+                message.channel.send('Please use a number as your argument. \n Usage: '+ prefix +'purge <ammount>');
+                return;
+            }
 
-            const fetched = await message.channel.fetchMessage({limit: args[0]});
+            const fetched = await message.channel.fetchMessages({limit: args[0]});
             console.log(fetched.size + ' messages found, deleting...');
 
             message.channel.bulkDelete(fetched)
-                .catch(error => message.channel.send('Error: ${error}'));
+                .catch(error => message.channel.send(`Error: ${error}`));
                 
         }
 
