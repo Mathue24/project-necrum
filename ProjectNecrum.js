@@ -64,7 +64,7 @@ bot.on('message', message => {
     else if(msg.includes('test'))
     {
         message.channel.send('Yeh');
-    }
+    } 
 
 
 });
