@@ -48,7 +48,7 @@ bot.on('message', message => {
 
     else if(msg === prefix + 'foo')
     {
-        message.channel.send('GOBLIN');
+        message.channel.send('bar');
     }
 
     else if(msg.startsWith(prefix + 'move'))
