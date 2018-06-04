@@ -68,6 +68,12 @@ bot.on('message', message => {
         message.channel.send('privileges**');
     }
 
+    else if(msg.includes('minecraft'))
+    {
+        message.delete();
+        message.channel.send('Please avoid using forbidden words in the future. Any future behaviour similar to this may result in revoking your basic priveleges.');
+    }
+
     if(msg.startsWith(prefix + 'purge'))
     {
         async function purge() 
