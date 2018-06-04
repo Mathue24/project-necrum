@@ -71,7 +71,7 @@ bot.on('message', message => {
     else if(msg.includes('minecraft'))
     {
         message.delete();
-        message.channel.send('Please avoid using forbidden words in the future. Any future behaviour similar to this may result in revoking your basic priveleges.');
+        message.channel.send('Dear '+ message.author + '. Please avoid using forbidden words in the future. May the party remind you, any future transgressions may result in revoking your basic privileges. Have a nice day.');
     }
 
     if(msg.startsWith(prefix + 'purge'))
