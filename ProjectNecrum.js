@@ -63,6 +63,11 @@ bot.on('message', message => {
         message.channel.send(':crab:CRABS ARE PEOPLE:crab:CLAMS ARE PEOPLE:crab:LEGIT OR QUIT:crab:');
     }
 
+    else if(msg.includes('my rights'))
+    {
+        message.channel.send('privileges**');
+    }
+
     if(msg.startsWith(prefix + 'purge'))
     {
         async function purge() 
