@@ -70,8 +70,15 @@ bot.on('message', message => {
 
     else if(msg.includes('minecraft'))
     {
-        message.delete();
-        message.channel.send('Dear '+ message.author + '. Please avoid using forbidden words in the future. May the party remind you, any future transgressions may result in revoking your basic privileges. Have a nice day.');
+        if(!message.member.roles.some(r=>["Administrator", "Member of The Party"].includes(r.name)) )
+        {
+            message.delete();
+            message.channel.send('Dear '+ message.author + '. Please avoid using forbidden words in the future. May the party remind you, any future transgressions may result in revoking your basic privileges. Have a nice day.');
+        }
+        else
+        {
+            message.channel.send('Yeah, '+ message.author + '. You cool.');
+        }
     }
 
     if(msg.startsWith(prefix + 'purge'))
