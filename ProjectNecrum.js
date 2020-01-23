@@ -68,6 +68,14 @@ bot.on('message', message => {
         message.channel.send('privileges**');
     }
 
+    else if(msg.includes(':frowning:'))
+    {
+        if(!message.member.roles.some(r=>["Administrator", "Member of The Party"].includes(r.name)) )
+        {
+            message.channel.send(message.author + ' cheer up! :smile: Smile! (sadness is a punishable offence)');
+        }
+    }
+
     else if(msg.includes('minecraft'))
     {
         if(!message.member.roles.some(r=>["Administrator", "Member of The Party"].includes(r.name)) )
