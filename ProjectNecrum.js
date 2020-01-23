@@ -74,6 +74,9 @@ bot.on('message', message => {
         {
             message.channel.send(message.author + ' cheer up! :smile: Smile! (sadness is a punishable offence)');
         }
+        else{
+            message.channel.send(':smile:');
+        }
     }
 
     else if(msg.includes('minecraft'))
