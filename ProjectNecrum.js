@@ -77,7 +77,7 @@ bot.on('message', message => {
         }
         else
         {
-            message.channel.send('Yeah, '+ message.author + '. You cool.');
+            message.channel.send('User '+ message.author +' authorised. You\'re cool.');
         }
     }
 
