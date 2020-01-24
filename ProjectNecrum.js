@@ -15,7 +15,6 @@ bot.on('message', message => {
     let msg = message.content.toLowerCase();
     let cont = message.content.slice(prefix.length).split(" ");
     let args = cont.slice(1);
-    const sad = client.emojis.find(emoji => emoji.name === "1000");
     
     if(message.author.bot) return;
     else if(message.channel.type === "dm") return;
@@ -69,7 +68,7 @@ bot.on('message', message => {
         message.channel.send('privileges**');
     }
 
-    else if(msg.includes(sad))
+    else if(msg.includes("😦"))
     {
         if(!message.member.roles.some(r=>["Administrator", "Member of The Party"].includes(r.name)) )
         {
